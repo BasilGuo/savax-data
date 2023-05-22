@@ -73,7 +73,7 @@ The Inter-Domain Source Address Validation (SAVA-X) mechanism establishes a trus
 
 In the process of packet forwarding, if the source address and the destination address of this packet both are addresses in the trust alliance, however the tag is not added or incorrectly added, AER of the destination AD determines that the source address is forged and directly discards this packet. The destination AD forwards the packet directly for packets whose source address is an address outside the trust alliance.
 
-This document mainly studies the relevant specifications of the data plane of the inter-domain source address validation architecture mechanism between ADs, which will protect IPv6 networks from being forged source address. You could see {{RFC8200}} for more  details about IPv6. It stipulates the state machine, tag generation and update, tag processing in AER, and packet signature Its promotion and application can realize the standardization of  the data plane in the SAVA-X to facilitate the related equipment developed by different manufacturers and organizations to cooperate to accomplish the inter-domain source address validation jointly.
+This document mainly studies the relevant specifications of the data plane of the inter-domain source address validation architecture mechanism between ADs, which will protect IPv6 networks from being forged source address. You could see {{RFC8200}} for more details about IPv6. It stipulates the state machine, tag generation and update, tag processing in AER, and packet signature Its promotion and application can realize the standardization of  the data plane in the SAVA-X to facilitate the related equipment developed by different manufacturers and organizations to cooperate to accomplish the inter-domain source address validation jointly.
 
 
 # Conventions and Definitions
@@ -98,6 +98,7 @@ This document mainly studies the relevant specifications of the data plane of th
 # State Machine Mechanism
 
 In SAVA-X, state machine mechanism is used to generate, update, and manage the tags.
+
 ~~~~~~
 +------+              +-------+                    +---------+
 | S_n  |     triger   | A-Box |     transition     | S_(n+1) |
@@ -140,7 +141,7 @@ There are two ways to generate tags: pseudo-random number algorithm and hash cha
 
 In the pseudo-random number generation algorithm, an initial number or stringis usually used as the "seed", which corresponds to the initial state of the state machine. Using seeds, a pseudo-random number sequence is generated as a tag sequence through some algorithm. Next, we would take KISS (keep it simple stub), a pseudo-random number generation algorithm, as an example to introduce how to apply it to the state machine mechanism. For the algorithm details of KISS, you could refer to the following reference pseudo code:
 
-```c
+```
 /* Seed variables */
 uint x = 123456789,y = 362436000,z = 521288629,c = 7654321;
 uint KISS(){
@@ -157,9 +158,9 @@ uint KISS(){
 
 In this algorithm, State `S` can be expressed as (`x`, `y`, `z`, `c`). The algorithm box is `KISS()`. After each calculation, the state undergoes a transition from `S_n` to `S_(n+1)`, that is, the four variables `x`, `y`, `z` and `c` are all changed. At the same time, a pseudo-rng number (`x` + `y` + `z`) is generated.
 
-As the state machine shown above, the initial state is `S_0` = (123456789, 362436000, 521288629, 7654321). In fact, the initial state can be arbitrarily selected by the algorithm shown below:
+As the state machine shown above, the initial state is `S_0 = (123456789, 362436000, 521288629, 7654321)`. In fact, the initial state can be arbitrarily selected by the algorithm shown below:
 
-```c
+```
 void init_KISS() {
    x = devrand();
    while (!(y = devrand())); /* y must not be zero */
