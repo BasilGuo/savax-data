@@ -17,7 +17,7 @@ v: 3
 coding: us-ascii
 pi:    # can use array (if all yes) or hash here
   toc: yes
-  sortrefs:   # defaults to yes
+  sortrefs: yes  # defaults to yes
   symrefs: yes
 
 author:
