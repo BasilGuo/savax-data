@@ -1,0 +1,111 @@
+{
+  "magic": "E!vIA5L86J2I",
+  "timestamp": "2023-05-23T01:06:30.525119+00:00",
+  "repo": "BasilGuo/savax-data",
+  "labels": [
+    {
+      "name": "bug",
+      "description": "Something isn't working",
+      "color": "d73a4a"
+    },
+    {
+      "name": "documentation",
+      "description": "Improvements or additions to documentation",
+      "color": "0075ca"
+    },
+    {
+      "name": "duplicate",
+      "description": "This issue or pull request already exists",
+      "color": "cfd3d7"
+    },
+    {
+      "name": "enhancement",
+      "description": "New feature or request",
+      "color": "a2eeef"
+    },
+    {
+      "name": "good first issue",
+      "description": "Good for newcomers",
+      "color": "7057ff"
+    },
+    {
+      "name": "help wanted",
+      "description": "Extra attention is needed",
+      "color": "008672"
+    },
+    {
+      "name": "invalid",
+      "description": "This doesn't seem right",
+      "color": "e4e669"
+    },
+    {
+      "name": "question",
+      "description": "Further information is requested",
+      "color": "d876e3"
+    },
+    {
+      "name": "wontfix",
+      "description": "This will not be worked on",
+      "color": "ffffff"
+    }
+  ],
+  "issues": [],
+  "pulls": [
+    {
+      "number": 1,
+      "id": "PR_kwDOJl7cLM5Q-akj",
+      "title": "Update and rename draft-todo-yourname-protocol.md to draft-xu-savax-data.md",
+      "url": "https://github.com/BasilGuo/savax-data/pull/1",
+      "state": "MERGED",
+      "author": "BasilGuo",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "Update and rename draft-todo-yourname-protocol.md to draft-xu-savax-data.md\r\n\r\ninit repo",
+      "createdAt": "2023-05-22T04:59:24Z",
+      "updatedAt": "2023-05-22T05:20:28Z",
+      "baseRepository": "BasilGuo/savax-data",
+      "baseRefName": "main",
+      "baseRefOid": "5f937468a994b8c9d16cafb3a566dc691ee50f9d",
+      "headRepository": "BasilGuo/savax-data",
+      "headRefName": "v04-init",
+      "headRefOid": "27caa8e58097ee0a45d0d5b248671715872f8b64",
+      "closedAt": "2023-05-22T05:20:28Z",
+      "mergedAt": "2023-05-22T05:20:28Z",
+      "mergedBy": "BasilGuo",
+      "mergeCommit": {
+        "oid": "007b82384955b04b0fc6a4430eda111f663ddee7"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 2,
+      "id": "PR_kwDOJl7cLM5Q-zfM",
+      "title": "Update draft-xu-savax-data.md",
+      "url": "https://github.com/BasilGuo/savax-data/pull/2",
+      "state": "MERGED",
+      "author": "BasilGuo",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "update: test gh-pages",
+      "createdAt": "2023-05-22T06:45:51Z",
+      "updatedAt": "2023-05-22T06:45:59Z",
+      "baseRepository": "BasilGuo/savax-data",
+      "baseRefName": "main",
+      "baseRefOid": "0235257f2edb8b8d5146550564535ac2ee93872d",
+      "headRepository": "BasilGuo/savax-data",
+      "headRefName": "v04-init",
+      "headRefOid": "d9648cdbce9c5a62d204aaf0932fa5e2091fc0a5",
+      "closedAt": "2023-05-22T06:45:59Z",
+      "mergedAt": "2023-05-22T06:45:59Z",
+      "mergedBy": "BasilGuo",
+      "mergeCommit": {
+        "oid": "488212beb6d1dd001199079876efd87cbf146723"
+      },
+      "comments": [],
+      "reviews": []
+    }
+  ]
+}
